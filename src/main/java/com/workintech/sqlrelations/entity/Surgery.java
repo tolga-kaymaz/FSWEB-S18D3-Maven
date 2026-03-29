@@ -12,14 +12,14 @@ import jakarta.persistence.*;
 public class Surgery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "nurse_id")
-    private long nurseId;
+    private Long nurseId;
 
     @Column(name = "patient_id")
-    private long patientId;
+    private Long patientId;
 
     @Column(name = "doctor_id")
-    private long doctorId;
+    private Long doctorId;
 }

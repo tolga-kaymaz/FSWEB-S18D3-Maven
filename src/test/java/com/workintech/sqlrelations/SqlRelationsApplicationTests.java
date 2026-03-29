@@ -70,7 +70,7 @@ class SqlRelationsApplicationTests {
 		assertNotNull(nurse);
 	}
 
-	@DisplayName("Nurse tablosu mevcut mu ? Doğru oluşturulmuş mu ?")
+	@DisplayName("Patient tablosu mevcut mu ? Doğru oluşturulmuş mu ?")
 	@Test
 	void findPatientTest(){
 		Patient patient = new Patient();
@@ -147,7 +147,7 @@ class SqlRelationsApplicationTests {
 
 		List<Operation> operationList = operationRepository.findAll();
 		Operation foundOperation = operationList.stream()
-				.filter(operation1 -> operation1.getDoctorId() == 1)
+				.filter(operation1 ->operation1.getDoctorId()== savedDoctor.getId())
 				.collect(Collectors.toList()).get(0);
 
 		assertNotNull(foundOperation);

@@ -13,11 +13,11 @@ import lombok.NoArgsConstructor;
 public class Operation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "patient_id")
-    private long patientId;
+    private Long patientId;
 
     @Column(name = "doctor_id")
-    private long doctorId;
+    private Long doctorId;
 }
